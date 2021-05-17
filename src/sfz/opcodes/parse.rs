@@ -186,6 +186,7 @@ impl Opcode {
             ("hikey", _) => utils::check_u8_between(value, 0, 127).map(Opcode::hikey),
             ("hivel", _) => utils::check_u8_between(value, 0, 127).map(Opcode::hivel),
             ("hirand", _) => utils::check_f32_between(value, 0., 1.).map(Opcode::hirand),
+            ("key", _) => utils::check_u8_between(value, 0, 127).map(Opcode::key),
             // NOTE: lokey v2 accepts i8, from -1:
             ("lokey", _) => utils::check_u8_between(value, 0, 127).map(Opcode::lokey),
             ("lovel", _) => utils::check_u8_between(value, 0, 127).map(Opcode::lovel),
