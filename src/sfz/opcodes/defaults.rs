@@ -27,6 +27,8 @@ pub(crate) static OPCODE_DEFAULT: phf::Map<&'static str, OpcodeType> = phf_map! 
     "lokey" => OpcodeType::u8(Some(0)),
     "loop_mode" => OpcodeType::loop_mode(None), // no_loop for samples without a loop defined,
                                                 // loop_continuous for samples w defined loop(s)
+    "loop_start" => OpcodeType::u32(None),
+    "loop_end" => OpcodeType::u32(None),
     "lorand" => OpcodeType::f32(Some(0.0)),
     "lovel" => OpcodeType::u8(Some(0)),
     "off_by" => OpcodeType::f32(Some(0.0)),

@@ -191,6 +191,8 @@ impl Opcode {
             ("lokey", _) => utils::check_u8_between(value, 0, 127).map(Opcode::lokey),
             ("lovel", _) => utils::check_u8_between(value, 0, 127).map(Opcode::lovel),
             ("loop_mode", _) => loop_mode::from_str(value).map(Opcode::loop_mode),
+            ("loop_start", _) => utils::check_u32_between(value, 0, u32::MAX).map(Opcode::loop_start),
+            ("loop_end", _) => utils::check_u32_between(value, 0, u32::MAX).map(Opcode::loop_end),
             ("lorand", _) => utils::check_f32_between(value, 0., 1.).map(Opcode::lorand),
             ("off_by", _) => utils::check_u32_between(value, 0, u32::MAX).map(Opcode::off_by),
             ("offset", _) => utils::check_u32_between(value, 0, u32::MAX).map(Opcode::offset),
